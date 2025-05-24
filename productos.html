@@ -340,7 +340,7 @@
 <!-- CLASIFICACION                  RE-DO -->
 
 <script>
-  // Refrescar una sola vez con delay sin interferir con otros scripts
+  // Paso 1: Refrescar una sola vez al cargar
   if (!sessionStorage.getItem('pageRefreshed')) {
     sessionStorage.setItem('pageRefreshed', 'true');
     setTimeout(() => {
@@ -369,27 +369,35 @@
       });
     }
 
-    // Leer filtro guardado en localStorage
+    // Leer filtro guardado
     var savedFilter = localStorage.getItem("activeFilter") || "*";
-
-    // Aplicar filtro
     iso.arrange({ filter: savedFilter });
     setActiveButton(savedFilter);
-
-    // Limpiar filtro guardado
     localStorage.removeItem("activeFilter");
 
-    // Manejar click en botones filtro
-    document.querySelectorAll(".filter-btn").forEach(function (btn) {
-      btn.addEventListener("click", function (e) {
+    // Paso 2: Manejar click en botones
+    document.querySelectorAll('.properties-filter a').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
         e.preventDefault();
-        var filterValue = btn.getAttribute("data-filter");
+        var filterValue = btn.getAttribute('data-filter');
         iso.arrange({ filter: filterValue });
         setActiveButton(filterValue);
+
+        // Guardar filtro para mantener después del reload
+        localStorage.setItem('activeFilter', filterValue);
+
+        // Paso 3: Hacer un solo reload al primer clic
+        if (!sessionStorage.getItem('filterClicked')) {
+          sessionStorage.setItem('filterClicked', 'true');
+          setTimeout(() => {
+            location.reload();
+          }, 100); // 0.1 segundos
+        }
       });
     });
   });
 </script>
+
 
 
   <footer>
