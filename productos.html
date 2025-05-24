@@ -336,6 +336,17 @@
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/isotope.min.js"></script>
 
+<!-- REFRESCO -->
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('ref') === 'index') {
+    window.location.href = "productos.html"; // Redirige sin parámetros y refresca
+  }
+</script>
+
+<!-- CLASIFICACION -->
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       var container = document.querySelector(".properties-box");
