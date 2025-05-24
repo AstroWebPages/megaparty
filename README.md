@@ -1,1 +1,1 @@
-megaparty.duckdns.org
+https://megaparty.duckdns.org
