@@ -336,58 +336,61 @@
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/isotope.min.js"></script>
 
-<!-- REFRESCO -->
+
+<!-- CLASIFICACION                  RE-DO -->
 
 <script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('ref') === 'index') {
-    window.location.href = "productos.html"; // Redirige sin parámetros y refresca
+  // Refrescar una sola vez con delay sin interferir con otros scripts
+  if (!sessionStorage.getItem('pageRefreshed')) {
+    sessionStorage.setItem('pageRefreshed', 'true');
+    setTimeout(() => {
+      location.reload();
+    }, 100); // 0.1 segundos
   }
-</script>
 
-<!-- CLASIFICACION -->
+  document.addEventListener("DOMContentLoaded", function () {
+    var container = document.querySelector(".properties-box");
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var container = document.querySelector(".properties-box");
+    if (!container) return;
 
-      // Inicializa Isotope
-      var iso = new Isotope(container, {
-        itemSelector: ".properties-items",
-        layoutMode: "fitRows",
-      });
+    // Inicializa Isotope
+    var iso = new Isotope(container, {
+      itemSelector: ".properties-items",
+      layoutMode: "fitRows",
+    });
 
-      // Función para activar botón seleccionado
-      function setActiveButton(filter) {
-        document.querySelectorAll(".filter-btn").forEach(function (btn) {
-          btn.classList.remove("is_active");
-          if (btn.getAttribute("data-filter") === filter) {
-            btn.classList.add("is_active");
-          }
-        });
-      }
-
-      // Leer filtro guardado en localStorage
-      var savedFilter = localStorage.getItem("activeFilter") || "*";
-
-      // Aplicar filtro
-      iso.arrange({ filter: savedFilter });
-      setActiveButton(savedFilter);
-
-      // Limpiar filtro guardado para no aplicar siempre
-      localStorage.removeItem("activeFilter");
-
-      // Manejar click en botones filtro
+    // Función para activar botón seleccionado
+    function setActiveButton(filter) {
       document.querySelectorAll(".filter-btn").forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-          e.preventDefault();
-          var filterValue = btn.getAttribute("data-filter");
-          iso.arrange({ filter: filterValue });
-          setActiveButton(filterValue);
-        });
+        btn.classList.remove("is_active");
+        if (btn.getAttribute("data-filter") === filter) {
+          btn.classList.add("is_active");
+        }
+      });
+    }
+
+    // Leer filtro guardado en localStorage
+    var savedFilter = localStorage.getItem("activeFilter") || "*";
+
+    // Aplicar filtro
+    iso.arrange({ filter: savedFilter });
+    setActiveButton(savedFilter);
+
+    // Limpiar filtro guardado
+    localStorage.removeItem("activeFilter");
+
+    // Manejar click en botones filtro
+    document.querySelectorAll(".filter-btn").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        var filterValue = btn.getAttribute("data-filter");
+        iso.arrange({ filter: filterValue });
+        setActiveButton(filterValue);
       });
     });
-  </script>
+  });
+</script>
+
 
   <footer>
     <div class="container">
