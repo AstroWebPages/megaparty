@@ -69,9 +69,10 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="index.html">Inicio</a></li>
-                      <li><a href="productos.html" class="active">Productos</a></li>
-                      <li><a href="contact.html">Contacto</a></li>
-                      <li><a href="#"><i class="fa fa-phone"></i> Llamada</a></li>
+                      <li><a href="productos.html" class="active">Properties</a></li>
+                      <li><a href="property-details.html">Property Details</a></li>
+                      <li><a href="contact.html">Contact Us</a></li>
+                      <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -99,7 +100,7 @@
   <div class="container">
     <ul class="properties-filter">
       <li>
-        <a data-filter="*" href="#!">Todos</a>
+        <a data-filter="*" href="#!">Nuevos</a>
       </li>
       <li>
         <a data-filter=".adv" href="#!">Fiesta</a>
@@ -115,10 +116,6 @@
     
     <div class="row properties-box">
       
-
-                          <!--          FIESTA              -->
-
-
       <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items adv">
         <div class="item">
           <a href="property-details.html"><img src="assets/images/globos/banderin.png" alt=""></a>
@@ -140,7 +137,7 @@
 
       <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items adv">
         <div class="item">
-          <a href="property-details.html"><img src="assets/images/globos/globosHday.png" alt=""></a>
+          <a href="property-details.html"><img src="assets/images/globos/banderin.png" alt=""></a>
           <span class="category">Luxury Villa</span>
           <h6>$2.264.000</h6>
           <h4><a href="property-details.html">18 Old Street Miami, OR 97219</a></h4>
@@ -158,9 +155,9 @@
       </div>
       
 
-      <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items adv">
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items str">
         <div class="item">
-          <a href="property-details.html"><img src="assets/images/globos/globosLargosCromados.png" alt=""></a>
+          <a href="property-details.html"><img src="assets/images/juguetes/baloncesto1.png" alt=""></a>
           <span class="category">Luxury Villa</span>
           <h6>$1.180.000</h6>
           <h4><a href="property-details.html">54 New Street Florida, OR 27001</a></h4>
@@ -177,15 +174,9 @@
         </div>
       </div>
 
-
-                          <!--          JUGUETES              -->
-
-
-
-
-      <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items str">
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items adv">
         <div class="item">
-          <a href="property-details.html"><img src="assets/images/juguetes/avangers20_1.png" alt=""></a>
+          <a href="property-details.html"><img src="assets/images/globos/cortinasMateMetalicas.png" alt=""></a>
           <span class="category">Luxury Villa</span>
           <h6>$1.460.000</h6>
           <h4><a href="property-details.html">26 Mid Street Portland, OR 38540</a></h4>
@@ -221,7 +212,7 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items str">
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items rac">
         <div class="item">
           <a href="property-details.html"><img src="assets/images/juguetes/accesoriosPrincesasAnillos1.png" alt=""></a>
           <span class="category">Penthouse</span>
@@ -240,9 +231,9 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items str">
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items adv">
         <div class="item">
-          <a href="property-details.html"><img src="assets/images/juguetes/accesoriosCoronaJoyas1.png" alt=""></a>
+          <a href="property-details.html"><img src="assets/images/globos/cortinasMiniCuadro.png" alt=""></a>
           <span class="category">Modern Condo</span>
           <h6>$450.000</h6>
           <h4><a href="property-details.html">22 Hope Street Portland, OR 16540</a></h4>
@@ -258,13 +249,6 @@
           </div>
         </div>
       </div>
-
-
-
-                                <!--          ACCESORIOS              -->
-
-
-
 
       <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items rac">
         <div class="item">
@@ -331,52 +315,77 @@
 
 
   
-<!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
+<!-- SCRIPT ON CLICK-->
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var container = document.querySelector(".properties-box");
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const filterLinks = document.querySelectorAll('.properties-filter a');
+  const products = document.querySelectorAll('.products-list .product');
+  const activeFilter = localStorage.getItem('activeFilter') || '*';
 
-      // Inicializa Isotope
-      var iso = new Isotope(container, {
-        itemSelector: ".properties-items",
-        layoutMode: "fitRows",
-      });
-
-      // Función para activar botón seleccionado
-      function setActiveButton(filter) {
-        document.querySelectorAll(".filter-btn").forEach(function (btn) {
-          btn.classList.remove("is_active");
-          if (btn.getAttribute("data-filter") === filter) {
-            btn.classList.add("is_active");
-          }
-        });
+  function applyFilter(filter) {
+    products.forEach(product => {
+      if (filter === '*' || product.classList.contains(filter.substring(1))) {
+        product.style.display = 'block';
+      } else {
+        product.style.display = 'none';
       }
-
-      // Leer filtro guardado en localStorage
-      var savedFilter = localStorage.getItem("activeFilter") || "*";
-
-      // Aplicar filtro
-      iso.arrange({ filter: savedFilter });
-      setActiveButton(savedFilter);
-
-      // Limpiar filtro guardado para no aplicar siempre
-      localStorage.removeItem("activeFilter");
-
-      // Manejar click en botones filtro
-      document.querySelectorAll(".filter-btn").forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-          e.preventDefault();
-          var filterValue = btn.getAttribute("data-filter");
-          iso.arrange({ filter: filterValue });
-          setActiveButton(filterValue);
-        });
-      });
     });
-  </script>
+  }
+
+  // Aplicar filtro guardado al cargar la página
+  applyFilter(activeFilter);
+
+  // Marcar el botón activo
+  filterLinks.forEach(link => {
+    if (link.getAttribute('data-filter') === activeFilter) {
+      link.classList.add('is_active');
+    } else {
+      link.classList.remove('is_active');
+    }
+
+    // Agregar evento click para cambiar filtro y guardar
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      const filter = link.getAttribute('data-filter');
+      localStorage.setItem('activeFilter', filter);
+
+      // Cambiar el botón activo
+      filterLinks.forEach(l => l.classList.remove('is_active'));
+      link.classList.add('is_active');
+
+      // Aplicar filtro a los productos
+      applyFilter(filter);
+    });
+  });
+});
+</script>
+
+
+
+  <!-- SCRIPT FILTRO -->
+<script>
+  // Inicializa Isotope
+  var iso = new Isotope('.properties-box', {
+    itemSelector: '.properties-items',
+    layoutMode: 'fitRows'
+  });
+
+  // Filtrado
+  const filterLinks = document.querySelectorAll('.properties-filter a');
+  filterLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const filterValue = this.getAttribute('data-filter');
+      iso.arrange({ filter: filterValue });
+
+      // Actualiza clase activa
+      filterLinks.forEach(l => l.classList.remove('is_active'));
+      this.classList.add('is_active');
+    });
+  });
+</script>
 
   <footer>
     <div class="container">
