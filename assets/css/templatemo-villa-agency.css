@@ -1838,22 +1838,25 @@ body {
 
   /* From Uiverse.io by ercnersoy */ 
 .input {
+  width: 100%; /* se adapta al contenedor */
+  max-width: 400px; /* opcional, para evitar que sea demasiado grande */
   border: none;
   padding: 1rem;
   border-radius: 1rem;
   background: #e8e8e8;
   box-shadow: 5px 5px 15px #c5c5c5,
-     -5px -5px 15px #ffffff;
+              -5px -5px 15px #ffffff;
   transition: 0.3s;
- }
- 
- .input:focus {
-  outline-color: #e8e8e8;
+  box-sizing: border-box; /* para que padding no afecte el width */
+}
+
+.input:focus {
+  outline: none;
   background: #e8e8e8;
   box-shadow: inset 20px 20px 60px #c5c5c5,
-     inset -20px -20px 60px #ffffff;
+              inset -20px -20px 60px #ffffff;
   transition: 0.3s;
- }
+}
 
   /* Boton Ordenar whastapp */ 
   .button3 {
