@@ -1,1 +1,1 @@
-https://megaparty.duckdns.org
+https://megaparty.astroweb.store
