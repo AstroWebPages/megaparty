@@ -26,7 +26,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-8">
           <ul class="info">
-            <li><i class="fa fa-envelope"></i> partyrosesa@gmail.com</li>
+            <li><i class="fa fa-envelope"></i> ventasmegapartytoys@gmail.com</li>
             <li><i class="fa fa-map"></i>  Colón 2000 Duty Free Mall piso #2 A107, Ciudad Colón, Panamá
 
 </li>
@@ -46,7 +46,7 @@
 
 
   <!-- WSP -->  
-<a href="https://wa.me/+50760990657?text=Hola%2C%20quiero%20más%20información" target="_blank">
+<a href="https://wa.me/+50764913791?text=Hola%2C%20quiero%20más%20información" target="_blank">
     <button class="Btn">
       <div class="sign">
         <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16">
@@ -84,7 +84,7 @@
                       <li><a href="../">Inicio</a></li>
                       <li><a href="/productos" class="active">Productos</a></li>
                       <li><a href="/contacto">Contacto</a></li>
-                      <li><a href="tel:+50312341234"><i class="fa fa-phone"></i> Llamada</a></li>
+                      <li><a href="tel:+50764913791"><i class="fa fa-phone"></i> Llamada</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -130,23 +130,79 @@
 
                           <!--          FIESTA              -->
 
-      <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items adv">
-        <div class="item">
-          <a href="../fiesta/globoEstandar.html"><img src="../assets/images/globos/globosEstandar.png" alt=""></a>
-          <span class="category">Fiesta</span>
-          <h6>$2.264.000</h6>
-          <h4><a href="../fiesta/globoEstandar.html">Globo Estándar</a></h4>
-          <ul>
+<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items adv" data-href="../fiesta/globoEstandar.html">
+  <div class="item">
+    <img src="../assets/images/globos/globosEstandar.png" alt="">
+    <span class="category">Fiesta</span>
+    <h6>$2.264.000</h6>
+    <h4>Globo Estándar</h4>
+    <ul>
             <li>Colores: <span>8</span></li>
             <li>Tamaños: <span>8</span></li>
             <li>Diseños: <span>2</span></li>
             <li>Opciones: <span>3</span></li>
-          </ul>
-          <div class="main-button">
-            <a href="../fiesta/globoEstandar.html">Encargo</a>
-          </div>
-        </div>
-      </div>
+    </ul>
+    <div class="main-button">
+      <a style="color: white;">Encargo</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items adv" data-href="../fiesta/globoEstandar.html">
+  <div class="item">
+    <img src="../assets/images/globos/globosEstandar.png" alt="">
+    <span class="category">Fiesta</span>
+    <h6>$2.264.000</h6>
+    <h4>Globo Estándar</h4>
+    <ul>
+            <li>Colores: <span>8</span></li>
+            <li>Tamaños: <span>8</span></li>
+            <li>Diseños: <span>2</span></li>
+            <li>Opciones: <span>3</span></li>
+    </ul>
+    <div class="main-button">
+      <a style="color: white;">Encargo</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items adv" data-href="../fiesta/globoEstandar.html">
+  <div class="item">
+    <img src="../assets/images/globos/globosEstandar.png" alt="">
+    <span class="category">Fiesta</span>
+    <h6>$2.264.000</h6>
+    <h4>Globo Estándar</h4>
+    <ul>
+            <li>Colores: <span>8</span></li>
+            <li>Tamaños: <span>8</span></li>
+            <li>Diseños: <span>2</span></li>
+            <li>Opciones: <span>3</span></li>
+    </ul>
+    <div class="main-button">
+      <a style="color: white;">Encargo</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items adv" data-href="../fiesta/globoEstandar.html">
+  <div class="item">
+    <img src="../assets/images/globos/globosEstandar.png" alt="">
+    <span class="category">Fiesta</span>
+    <h6>$2.264.000</h6>
+    <h4>Globo Estándar</h4>
+    <ul>
+            <li>Colores: <span>8</span></li>
+            <li>Tamaños: <span>8</span></li>
+            <li>Diseños: <span>2</span></li>
+            <li>Opciones: <span>3</span></li>
+    </ul>
+    <div class="main-button">
+      <a style="color: white;">Encargo</a>
+    </div>
+  </div>
+</div>
+
+<!-- OLD NONCLICK -->
 
       <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items adv">
         <div class="item">
@@ -350,6 +406,22 @@
   <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="../assets/js/isotope.min.js"></script>
+
+
+<!-- ALL CLICKABLE -->
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('[data-href]').forEach(container => {
+      const href = container.getAttribute('data-href');
+      container.style.cursor = "pointer";
+      container.addEventListener('click', function () {
+        window.location.href = href;
+      });
+    });
+  });
+</script>
+
 
 
 <!-- CLASIFICACION          &  REFRESH   LIT BY ASTRO-->
