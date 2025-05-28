@@ -438,18 +438,6 @@
         link.click(); // Simula el clic para activar el filtro
       }
     }
-
-    // Añadir lógica para refrescar una sola vez cuando se haga clic en un botón de filtro
-    document.querySelectorAll('.properties-filter a').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        if (!sessionStorage.getItem('filterClicked')) {
-          sessionStorage.setItem('filterClicked', 'true');
-          setTimeout(() => {
-            location.reload();
-          }, 100); // 0.1 segundos
-        }
-      });
-    });
   });
 </script>
 
