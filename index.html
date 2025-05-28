@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="prefetch" href="/productos" as="document">
+    <link rel="prefetch" href="/productos/index.html" as="document">
 
     <title>MegaParty</title>
 
@@ -31,16 +31,14 @@
       <div class="row">
         <div class="col-lg-8 col-md-8">
           <ul class="info">
-            <li><i class="fa fa-envelope"></i> ventasmegapartytoys@gmail.com</li>
-            <li><i class="fa fa-map"></i>  Colón 2000 Duty Free Mall piso #2 A107, Ciudad Colón, Panamá
-
-</li>
+            <li data-href="mailto:ventasmegapartytoys@gmail.com"><i class="fa fa-envelope"></i> ventasmegapartytoys@gmail.com</li>
+            <li data-href="https://maps.app.goo.gl/uK5McNyCE6pwyZLU6"><i class="fa fa-map"></i> Colón 2000 Duty Free Mall piso #2 A107, Ciudad Colón, Panamá</li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-4">
           <ul class="social-links">
             <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://wa.me/+50764913791" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
             <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
           </ul>
@@ -155,27 +153,13 @@
         <li>PRO: <span>10</span></li>
       </ul>
       <div class="main-button">
-        <a href="/productos/index.html?filter=rac">Ir a Accesorios</a>
+        <a href="/productos/index.html?filter=rac">Ver Todo</a>
       </div>
     </div>
   </div>
 </div>
  </div>
 </div>
-
-<!-- ALL CLICKEABLE -->
-
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('[data-href]').forEach(container => {
-      const href = container.getAttribute('data-href');
-      container.style.cursor = "pointer";
-      container.addEventListener('click', function () {
-        window.location.href = href;
-      });
-    });
-  });
-</script>
 
   <div class="contact section">
     <div class="container">
@@ -199,13 +183,13 @@
           </div>
           <br><br>
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-href="tel:+5076491379">
               <a href="tel:+5076491379"><div class="item phone">
                 <img src="assets/images/phone-icon.png" alt="" style="max-width: 52px;">
-                <h6>+507 6491-3791<br><span>Teléfono</span></h6>
+                <h6>+507 6491-3791<br><span>Teléfono</span></b></h6>
               </div></a>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6"  data-href="mailto:ventasmegapartytoys@gmail.com">
               <div class="item email">
                 <img src="assets/images/email-icon.png" alt="" style="max-width: 52px;">
                 <strong><a style="font-size: smaller; color: black;" href="mailto:ventasmegapartytoys@gmail.com">ventasmegapartytoys@gmail.com</a></strong><h6><span>Email</span></h6></a>
@@ -252,12 +236,7 @@
     </div>
   </div>
 
-  <!--SCRIPT ON CLICK-->
-<script>
-  function setActiveFilter(filter) {
-    localStorage.setItem('activeFilter', filter);
-  }
-</script>
+
 
   <footer>
     <div class="container">
@@ -270,6 +249,29 @@
   </footer>
 
   <!-- Scripts -->
+
+ <!--SCRIPT ON CLICK-->
+<script>
+  function setActiveFilter(filter) {
+    localStorage.setItem('activeFilter', filter);
+  }
+</script>
+
+
+  <!-- ALL CLICKEABLE -->
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('[data-href]').forEach(container => {
+      const href = container.getAttribute('data-href');
+      container.style.cursor = "pointer";
+      container.addEventListener('click', function () {
+        window.location.href = href;
+      });
+    });
+  });
+</script>
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
