@@ -127,7 +127,7 @@
     </ul>
 
     
-    <div class="row properties-box">      
+    <div class="row properties-box" id="properties">      
 
                           <!--          FIESTA              -->
 
@@ -408,6 +408,26 @@
   <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="../assets/js/isotope.min.js"></script>
 
+<!--SCROLL-->
+
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const filter = urlParams.get('filter');
+
+    // Lista de filtros válidos
+    const validFilters = ['adv', 'str', 'rac'];
+
+    if (validFilters.includes(filter)) {
+      const target = document.getElementById('properties');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>
+
+
 
 <!-- ALL CLICKABLE -->
 
@@ -425,7 +445,7 @@
 
 
 
-<!-- CLASIFICACION     NEW     &  REFRESH   LIT BY ASTRO-->
+<!-- CLASIFICACION     NEW   LIT BY ASTRO-->
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
