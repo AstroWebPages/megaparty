@@ -124,3 +124,15 @@
 
 
 })(window.jQuery);
+
+//ALL CLICKEABLE
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('[data-href]').forEach(container => {
+      const href = container.getAttribute('data-href');
+      container.style.cursor = "pointer";
+      container.addEventListener('click', function () {
+        window.location.href = href;
+      });
+    });
+  });
