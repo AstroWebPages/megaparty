@@ -425,56 +425,23 @@
 
 
 
-<!-- CLASIFICACION          &  REFRESH   LIT BY ASTRO-->
+<!-- CLASIFICACION     NEW     &  REFRESH   LIT BY ASTRO-->
 
 <script>
-  // Paso 1: Refrescar una sola vez al cargar
-  if (!sessionStorage.getItem('pageRefreshed')) {
-    sessionStorage.setItem('pageRefreshed', 'true');
-    setTimeout(() => {
-      location.reload();
-    }, 2000); // 0.1 segundos
-  }
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const filter = params.get("filter");
 
-  document.addEventListener("DOMContentLoaded", function () {
-    var container = document.querySelector(".properties-box");
-
-    if (!container) return;
-
-    // Inicializa Isotope
-    var iso = new Isotope(container, {
-      itemSelector: ".properties-items",
-      layoutMode: "fitRows",
-    });
-
-    // Función para activar botón seleccionado
-    function setActiveButton(filter) {
-      document.querySelectorAll(".filter-btn").forEach(function (btn) {
-        btn.classList.remove("is_active");
-        if (btn.getAttribute("data-filter") === filter) {
-          btn.classList.add("is_active");
-        }
-      });
+    if (filter) {
+      const link = document.querySelector(`.properties-filter a[data-filter="${filter === '*' ? '*' : '.' + filter}"]`);
+      if (link) {
+        link.click(); // Simula el clic para activar el filtro
+      }
     }
 
-    // Leer filtro guardado
-    var savedFilter = localStorage.getItem("activeFilter") || "*";
-    iso.arrange({ filter: savedFilter });
-    setActiveButton(savedFilter);
-    localStorage.removeItem("activeFilter");
-
-    // Paso 2: Manejar click en botones
+    // Añadir lógica para refrescar una sola vez cuando se haga clic en un botón de filtro
     document.querySelectorAll('.properties-filter a').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        var filterValue = btn.getAttribute('data-filter');
-        iso.arrange({ filter: filterValue });
-        setActiveButton(filterValue);
-
-        // Guardar filtro para mantener después del reload
-        localStorage.setItem('activeFilter', filterValue);
-
-        // Paso 3: Hacer un solo reload al primer clic
         if (!sessionStorage.getItem('filterClicked')) {
           sessionStorage.setItem('filterClicked', 'true');
           setTimeout(() => {
