@@ -1844,7 +1844,7 @@
           <img draggable="false" src="../assets/images/personajes/PT-BELLA-RP34.jpg" alt=""></a>
           <span class="category">Accesorios</span>
           <h6>$980.000</h6>
-          <h4>Traje </a></h4>
+          <h4>Traje Bella</a></h4>
           <ul>
             <li>Tallas: <span>X</span></li>
           </ul>
@@ -1955,8 +1955,17 @@
     }
   });
 </script>
-
-
+<!--REFRESH LAST-->
+  <script>
+    window.onload = function () {
+      if (!localStorage.getItem("refreshedOnce")) {
+        localStorage.setItem("refreshedOnce", "true");
+        location.reload();
+      } else {
+        localStorage.removeItem("refreshedOnce");
+      }
+    };
+  </script>
 
 
   <footer>
