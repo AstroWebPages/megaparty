@@ -115,6 +115,8 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
+                      <img draggable="false" src="../assets/images/juguetes/girl/DT-BLU-B15.jpg" alt="">
+                      <img draggable="false" src="../assets/images/juguetes/girl/DT-MKMN-B04.jpg" alt="">
                       <img draggable="false" src="../assets/images/juguetes/boy/DT-BLU-B04.jpg" alt="">
                       <img draggable="false" src="../assets/images/juguetes/boy/FT-MT-B04.jpg" alt="">
                       <img draggable="false" src="../assets/images/juguetes/boy/NT-PAW-B04.jpg" alt="">
@@ -131,7 +133,10 @@
                           <label for="diseno">Selecciona Diseño:</label>
                           <select class="input" id="diseno">
                               <option value="">Diseños</option>
-                              <option value="Bluey">Bluey</option>
+                              <option value="Bluey DT-BLU-B15">Bluey (1)</option>
+                              <option value="Minnie">Minnie</option>
+                              <option value="Bluey DT-BLU-B04">Bluey (2)</option>
+
                               <option value="Minecraft">Minecraft</option>
                               <option value="Paw Patrol">Paw Patrol</option>
                               <option value="Sonic">Sonic</option>
@@ -203,7 +208,18 @@
         }
   </script>
 
+<script>
+    window.onload = function() {
+      window.scrollTo(0, document.body.scrollHeight);
 
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }, 1200);
+    };
+  </script>
 
   <footer class="footer-no-gap">
     <div class="container">
