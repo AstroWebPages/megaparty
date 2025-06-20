@@ -115,10 +115,10 @@
         <a draggable="false" data-filter="*" href="#!">Todos</a>
       </li>
       <li>
-        <a draggable="false" data-filter="#" href="juguetes.html">Juguetes</a>
+        <a draggable="false" data-filter="#" href="/categorias/juguetes.html?filter=all#!">Juguetes</a>
       </li>
       <li>
-        <a draggable="false" data-filter="#" href="globos.html">Globos</a>
+        <a draggable="false" data-filter="#" href="/categorias/globos.html?filter=all#!">Globos</a>
       </li>
       <li>
         <a draggable="false" data-filter=".rac" href="#!">Velas</a>
@@ -1705,7 +1705,7 @@
     const filter = urlParams.get('filter');
 
     // Lista de filtros válidos
-    const validFilters = ['adv', 'str', 'rac'];
+    const validFilters = ['adv', 'str', 'rac' , 'bol' , 'acc' , 'man' , 'kit'];
 
     if (validFilters.includes(filter)) {
       const target = document.getElementById('properties');

@@ -25,7 +25,18 @@
                           <!--          BY CHANCLA FACHA            -->
 
 
-
+    <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
 
 
 
@@ -118,6 +129,9 @@
 <div class="section properties">
   <div class="container">
     <ul class="properties-filter">
+      <li>
+        <a draggable="false" data-filter="*" href="/categorias/">&LeftArrow; &nbsp Categorías</a>
+      </li>
       <li>
         <a draggable="false" data-filter="*" href="#!">Todos</a>
       </li>
@@ -437,7 +451,7 @@
     const filter = urlParams.get('filter');
 
     // Lista de filtros válidos
-    const validFilters = ['adv', 'str', 'rac'];
+    const validFilters = ['all', 'str', 'rac'];
 
     if (validFilters.includes(filter)) {
       const target = document.getElementById('properties');
