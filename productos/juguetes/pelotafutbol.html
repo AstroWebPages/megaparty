@@ -117,50 +117,80 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img draggable="false" src="../../assets/images/juguetes/boy/LT-SW-SC4.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/juguetes/boy/MT-SP-SC2.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/juguetes/boy/MT-SP-SC4.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/juguetes/boy/DT-MK-SC2.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/juguetes/boy/MT-AV-SC4.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/juguetes/boy/MT-CA-SC2.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/juguetes/boy/LT-YODA-SC2.jpg" alt="">
+  <label for="diseno">Selecciona Productos:</label>
+  <input type="hidden" id="diseno" name="diseno" />
+
+  <div class="selector-cajas" id="selectorDisenos">
+
+    <div class="caja" data-valor="Star Wars LT-SW-SC4">
+      <img draggable="false" src="../../assets/images/juguetes/boy/LT-SW-SC4.jpg" alt="Star Wars LT-SW-SC4">
+      Star&nbsp;Wars
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Spider-Man Rojo MT-SP-SC2">
+      <img draggable="false" src="../../assets/images/juguetes/boy/MT-SP-SC2.jpg" alt="Spider-Man Rojo MT-SP-SC2">
+      Spider-Man&nbsp;Rojo
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Spider-Man Azul MT-SP-SC4">
+      <img draggable="false" src="../../assets/images/juguetes/boy/MT-SP-SC4.jpg" alt="Spider-Man Azul MT-SP-SC4">
+      Spider-Man&nbsp;Azul
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Avengers MT-AV-SC4">
+      <img draggable="false" src="../../assets/images/juguetes/boy/MT-AV-SC4.jpg" alt="Avengers MT-AV-SC4">
+      Avengers
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Avengers Escudo MT-CA-SC2">
+      <img draggable="false" src="../../assets/images/juguetes/boy/MT-CA-SC2.jpg" alt="Avengers Escudo MT-CA-SC2">
+      Avengers&nbsp;Escudo
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Baby Yoda LT-YODA-SC2">
+      <img draggable="false" src="../../assets/images/juguetes/boy/LT-YODA-SC2.jpg" alt="Baby Yoda LT-YODA-SC2">
+      Baby&nbsp;Yoda
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+  </div>
+
+
+                      <!--nuevo formulario -->
 
 
                     </div>
                     <div class="col-lg-3">
+                    <div class="sticky-formulario">
                       <h4>Formulario de pedido</h4>
                       
   <!--funcion helio y cantidad-->
 
-                          <label for="diseno">Selecciona Diseño:</label>
-                          <select class="input" id="diseno">
-                              <option value="">Diseños</option>
-                              <option value="Star Wars">Star Wars</option>
-                              <option value="Spider-Man Rojo MT-SP-SC2">Spider-Man (Rojo)</option>
-                              <option value="Spider-Man Azul MT-SP-SC4">Spider-Man (Azul)</option>
-                              <option value="Avengers MT-AV-SC4">Avengers</option>
-                              <option value="Avengers Escudo MT-CA-SC2">Avengers Escudo</option>
-                              <option value="Baby Yoda">Baby Yoda</option>
 
+<label class="label" for="detalle">Detallar pedido (opcional):</label><br><br>
+<textarea class="input" id="detalle" placeholder="Detalle su pedido" rows="4"></textarea>
 
-                          </select>
-
-                          <br><br>
-
-                          <label class="label" for="cantidad">Cantidad de unidades:</label>
-                          <input class="input" type="number" id="cantidad" min="1" placeholder="Ingrese Unidades">
                          
-                          
-                          <br><br>
-                          
-                          <label for="pcs">Piezas por unidad</label><br>
-                          <select class="input" id="pcs">
-                              <option value="1Pcs">Unidad de 1 Piezas</option>
-                              <option value="2Pcs">Unidad de 2 Piezas</option>
-
-                          </select>
 
                           <br><br>
+
 
                           <button class="button3" onclick="enviarWhatsApp()">Enviar a WhatsApp
                               <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
@@ -177,36 +207,41 @@
       </div>
     </div>
   </div>
+</div>
 
   <!--BOTON WHASTAPP-->
 
   <script>
       function enviarWhatsApp() {
-          let diseno = document.getElementById("diseno").value;
-          let cantidad = document.getElementById("cantidad").value;
-          let pcs = document.getElementById("pcs").value;
-          var producto = document.getElementById("producto").textContent;
+  // Obtener valores de los campos del formulario
+  let producto = document.getElementById("producto").innerText; 
+  let diseno = document.getElementById("diseno").value;
+  let detalle = document.getElementById("detalle").value.trim();
 
-          if (!diseno) {
-              alert("Por favor, selecciona una opción de Diseño.");
-              return;
-          }
+  // Validar que al menos se haya seleccionado un producto
+  if (!diseno) {
+    alert("⚠️ Por favor, selecciona al menos un producto.");
+    return;
+  }
 
-          if (!cantidad || cantidad <= 0) {
-              alert("Por favor, ingresa una cantidad válida de globos.");
-              return;
-          }
+  // Construcción del mensaje principal
+  let mensaje = `📦 *Pedido MegaParty*\n\n` +
+                `🧸 *Producto:* ${producto}\n` +
+                `🎨 *Diseño(s) seleccionado(s):*\n${diseno}`;
 
-          if (!pcs) {
-              alert("Por favor, selecciona una cantidad de piezas.");
-              return;
-          }
+  // Añadir detalles del pedido si el usuario escribió algo
+  if (detalle !== "") {
+    mensaje += `\n\n📝 *Detalle del pedido:*\n${detalle}`;
+  }
 
-          let mensaje = encodeURIComponent(`Deseo ${cantidad} unidades de: ${producto} de ${pcs} | Con el diseño: ${diseno}`);
-          let url = `https://wa.me/+50764913791?text=${mensaje}`;
-          window.open(url, '_blank'); 
-        }
+  // Enviar mensaje por WhatsApp
+  let url = `https://wa.me/+50764913791?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, '_blank');
+}
+
   </script>
+
+<!-- nuevo formulario termina -->
 
 
   <script>
