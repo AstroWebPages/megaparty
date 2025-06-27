@@ -306,20 +306,35 @@
     input.addEventListener('click', function (e) {
       e.stopPropagation();
     });
-    input.addEventListener('change', function () {
-      // Actualiza el valor del input hidden con la nueva cantidad
-      const caja = this.closest('.caja');
-      const seleccionados = Array.from(document.querySelectorAll(".caja.seleccionado"))
-        .map(c => {
-          const cantidadInput = c.querySelector(".input-cantidad");
-          const cantidad = cantidadInput ? cantidadInput.value : 1;
-          return `${c.dataset.valor} (x${cantidad})`;
-        });
 
-      document.getElementById("diseno").value = seleccionados.join(", ");
+    input.addEventListener('input', function () {
+      const caja = this.closest('.caja');
+
+      // Si la caja no está seleccionada y el valor es mayor a 0
+      if (!caja.classList.contains('seleccionado') && parseInt(this.value) > 0) {
+        caja.classList.add('seleccionado');
+      }
+
+      actualizarInputHidden();
+    });
+
+    input.addEventListener('change', function () {
+      actualizarInputHidden();
     });
   });
+
+  function actualizarInputHidden() {
+    const seleccionados = Array.from(document.querySelectorAll(".caja.seleccionado"))
+      .map(c => {
+        const cantidadInput = c.querySelector(".input-cantidad");
+        const cantidad = cantidadInput ? cantidadInput.value : 1;
+        return `${c.dataset.valor} (x${cantidad})`;
+      });
+
+    document.getElementById("diseno").value = seleccionados.join(", ");
+  }
 </script>
+
 
 
 <label class="label" for="detalle">Detallar pedido (opcional):</label><br><br>
