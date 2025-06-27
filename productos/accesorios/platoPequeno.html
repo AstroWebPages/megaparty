@@ -118,58 +118,95 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img draggable="false" src="../../assets/images/accesorios/HM-BLKG-P7.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/HM-GOLDG-P7.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/HM-LBLUEG-P7.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/HM-PINKG-P7.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/HM-RBLUEG-P7.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/HM-REDG-P7.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/HM-SLG-P7.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/HM-WHIG-P7.jpg" alt="">
+  <label for="diseno">Selecciona Color:</label>
+  <input type="hidden" id="diseno" name="diseno" />
+
+  <div class="selector-cajas" id="selectorDisenos">
+
+    <div class="caja" data-valor="Negro HM-BLKG-P7">
+      <img draggable="false" src="../../assets/images/accesorios/HM-BLKG-P7.jpg" alt="Negro HM-BLKG-P7">
+      Negro
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Dorado HM-GOLDG-P7">
+      <img draggable="false" src="../../assets/images/accesorios/HM-GOLDG-P7.jpg" alt="Dorado HM-GOLDG-P7">
+      Dorado
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Celeste HM-LBLUEG-P7">
+      <img draggable="false" src="../../assets/images/accesorios/HM-LBLUEG-P7.jpg" alt="Celeste HM-LBLUEG-P7">
+      Celeste
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Rosado HM-PINKG-P7">
+      <img draggable="false" src="../../assets/images/accesorios/HM-PINKG-P7.jpg" alt="Rosado HM-PINKG-P7">
+      Rosado
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Morado HM-RBLUEG-P7">
+      <img draggable="false" src="../../assets/images/accesorios/HM-RBLUEG-P7.jpg" alt="Morado HM-RBLUEG-P7">
+      Morado
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Rojo HM-REDG-P7">
+      <img draggable="false" src="../../assets/images/accesorios/HM-REDG-P7.jpg" alt="Rojo HM-REDG-P7">
+      Rojo
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Plateado HM-SLG-P7">
+      <img draggable="false" src="../../assets/images/accesorios/HM-SLG-P7.jpg" alt="Plateado HM-SLG-P7">
+      Plateado
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Blanco HM-WHIG-P7">
+      <img draggable="false" src="../../assets/images/accesorios/HM-WHIG-P7.jpg" alt="Blanco HM-WHIG-P7">
+      Blanco
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+  </div>
+
+                   <!--nuevo formulario -->
+
 
                     </div>
                     <div class="col-lg-3">
+                    <div class="sticky-formulario">
                       <h4>Formulario de pedido</h4>
                       
   <!--funcion helio y cantidad-->
 
 
-                          <label for="diseno">Selecciona Color:</label>
-                          <select class="input" id="diseno">
-                              <option value="">Color</option>
-                              <option value="Negro">Negro</option>
-                              <option value="Dorado">Dorado</option>
-                              <option value="Celeste">Celeste</option>
-                              <option value="Rosado">Rosado</option>
-                              <option value="Morado">Morado</option>
-                              <option value="Rojo">Rojo</option>
-                              <option value="Plateado">Plateado</option>
-                              <option value="Blanco">Blanco</option>
-   
+<label class="label" for="detalle">Detallar pedido (opcional):</label><br><br>
+<textarea class="input" id="detalle" placeholder="Detalle su pedido" rows="4"></textarea>
 
-
-
-                          </select>
-
-                          <br><br>
-
-                          <label class="label" for="cantidad">Cantidad de unidades:</label>
-                          <input class="input" type="number" id="cantidad" min="1" placeholder="Ingrese Unidades">
                          
-                          
-                          <br><br>
-                          
-                          <label for="pcs">Piezas por unidad</label><br>
-                          <select class="input" id="pcs">
-                              <option value="">Piezas</option>
-
-                              <option value="7Pcs">Unidad de 7 Piezas</option>
-                              <option value="9Pcs">Unidad de 9 Piezas</option>
-
-
-                          </select>
 
                           <br><br>
+
 
                           <button class="button3" onclick="enviarWhatsApp()">Enviar a WhatsApp
                               <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
@@ -186,36 +223,41 @@
       </div>
     </div>
   </div>
+</div>
 
   <!--BOTON WHASTAPP-->
 
-<script>
+  <script>
       function enviarWhatsApp() {
-          let diseno = document.getElementById("diseno").value;
-          let cantidad = document.getElementById("cantidad").value;
-          let pcs = document.getElementById("pcs").value;
-          var producto = document.getElementById("producto").textContent;
+  // Obtener valores de los campos del formulario
+  let producto = document.getElementById("producto").innerText; 
+  let diseno = document.getElementById("diseno").value;
+  let detalle = document.getElementById("detalle").value.trim();
 
-          if (!diseno) {
-              alert("Por favor, selecciona una opción de Diseño.");
-              return;
-          }
+  // Validar que al menos se haya seleccionado un producto
+  if (!diseno) {
+    alert("⚠️ Por favor, selecciona al menos un producto.");
+    return;
+  }
 
-          if (!cantidad || cantidad <= 0) {
-              alert("Por favor, ingresa una cantidad válida de globos.");
-              return;
-          }
+  // Construcción del mensaje principal
+  let mensaje = `📦 *Pedido MegaParty*\n\n` +
+                `🧸 *Producto:* ${producto}\n` +
+                `🎨 *Diseño(s) seleccionado(s):*\n${diseno}`;
 
-          if (!pcs) {
-              alert("Por favor, selecciona una cantidad de piezas.");
-              return;
-          }
+  // Añadir detalles del pedido si el usuario escribió algo
+  if (detalle !== "") {
+    mensaje += `\n\n📝 *Detalle del pedido:*\n${detalle}`;
+  }
 
-          let mensaje = encodeURIComponent(`Deseo ${cantidad} unidades de: ${producto} de ${pcs} | Con el diseño: ${diseno}`);
-          let url = `https://wa.me/+50764913791?text=${mensaje}`;
-          window.open(url, '_blank'); 
-        }
+  // Enviar mensaje por WhatsApp
+  let url = `https://wa.me/+50764913791?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, '_blank');
+}
+
   </script>
+
+<!-- nuevo formulario termina -->
 
 
   <script>

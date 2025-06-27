@@ -118,71 +118,151 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img draggable="false" src="../../assets/images/accesorios/CA-FUT3-P7.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/CA-REV2-P7.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/CA-REX-P7.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/DPG-BLU-P003.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/DPG-MO2-P002.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/DPG-STI-P002.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/HM-BSC-P7B.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/HM-BSC-P7G.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/HM-BSG-P7.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/MPG-SP2-P002.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/PPG-PR3-P002.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/RPG-ZN-P002.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/XPG-PWG-P002.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/XPG-PW-P002.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/accesorios/FPG-MT-P002.jpg" alt="">
+  <label for="diseno">Selecciona Productos:</label>
+  <input type="hidden" id="diseno" name="diseno" />
+
+  <div class="selector-cajas" id="selectorDisenos">
+
+    <div class="caja" data-valor="Fútbol CA-FUT3-P7">
+      <img draggable="false" src="../../assets/images/accesorios/CA-FUT3-P7.jpg" alt="Fútbol CA-FUT3-P7">
+      Fútbol
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Revelación de género CA-REV2-P7">
+      <img draggable="false" src="../../assets/images/accesorios/CA-REV2-P7.jpg" alt="Revelación de género CA-REV2-P7">
+      Revelación de género
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Rex CA-REX-P7">
+      <img draggable="false" src="../../assets/images/accesorios/CA-REX-P7.jpg" alt="Rex CA-REX-P7">
+      Rex
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Bluey DPG-BLU-P003">
+      <img draggable="false" src="../../assets/images/accesorios/DPG-BLU-P003.jpg" alt="Bluey DPG-BLU-P003">
+      Bluey
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Moana DPG-MO2-P002">
+      <img draggable="false" src="../../assets/images/accesorios/DPG-MO2-P002.jpg" alt="Moana DPG-MO2-P002">
+      Moana
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Stitch DPG-STI-P002">
+      <img draggable="false" src="../../assets/images/accesorios/DPG-STI-P002.jpg" alt="Stitch DPG-STI-P002">
+      Stitch
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Baby Shower (Celeste) HM-BSC-P7B">
+      <img draggable="false" src="../../assets/images/accesorios/HM-BSC-P7B.jpg" alt="Baby Shower (Celeste) HM-BSC-P7B">
+      Baby Shower (Celeste)
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Baby Shower (Rosado) HM-BSC-P7G">
+      <img draggable="false" src="../../assets/images/accesorios/HM-BSC-P7G.jpg" alt="Baby Shower (Rosado) HM-BSC-P7G">
+      Baby Shower (Rosado)
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Baby Shower (Blanco) HM-BSG-P7">
+      <img draggable="false" src="../../assets/images/accesorios/HM-BSG-P7.jpg" alt="Baby Shower (Blanco) HM-BSG-P7">
+      Baby Shower (Blanco)
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Spider-Man MPG-SP2-P002">
+      <img draggable="false" src="../../assets/images/accesorios/MPG-SP2-P002.jpg" alt="Spider-Man MPG-SP2-P002">
+      Spider-Man
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Princesa PPG-PR3-P002">
+      <img draggable="false" src="../../assets/images/accesorios/PPG-PR3-P002.jpg" alt="Princesa PPG-PR3-P002">
+      Princesa
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Granja de Xenón RPG-ZN-P002">
+      <img draggable="false" src="../../assets/images/accesorios/RPG-ZN-P002.jpg" alt="Granja de Xenón RPG-ZN-P002">
+      Granja de Xenón
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Paw Patrol (Rosado) XPG-PWG-P002">
+      <img draggable="false" src="../../assets/images/accesorios/XPG-PWG-P002.jpg" alt="Paw Patrol (Rosado) XPG-PWG-P002">
+      Paw Patrol (Rosado)
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Paw Patrol (Azul) XPG-PW-P002">
+      <img draggable="false" src="../../assets/images/accesorios/XPG-PW-P002.jpg" alt="Paw Patrol (Azul) XPG-PW-P002">
+      Paw Patrol (Azul)
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Minecraft FPG-MT-P002">
+      <img draggable="false" src="../../assets/images/accesorios/FPG-MT-P002.jpg" alt="Minecraft FPG-MT-P002">
+      Minecraft
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+  </div>
+
+                    <!--nuevo formulario -->
+
 
                     </div>
                     <div class="col-lg-3">
+                    <div class="sticky-formulario">
                       <h4>Formulario de pedido</h4>
                       
   <!--funcion helio y cantidad-->
 
 
-                          <label for="diseno">Selecciona Diseño:</label>
-                          <select class="input" id="diseno">
-                              <option value="">Diseño</option>
-                              <option value="Fútbol">Fútbol</option>
-                              <option value="Revelación de género">Revelación de género</option>
-                              <option value="Rex">Rex</option>
-                              <option value="Bluey">Bluey</option>
-                              <option value="Moana">Moana</option>
-                              <option value="Stitch">Stitch</option>
-                              <option value="Baby Shower (Celeste)">Baby Shower (Celeste)</option>
-                              <option value="Baby Shower (Rosado)">Baby Shower (Rosado)</option>
-                              <option value="Baby Shower (Blanco)">Baby Shower (Blanco)</option>
-                              <option value="Spider-Man">Spider-Man</option>
-                              <option value="Princesa">Princesa</option>
-                              <option value="Granja de Xenón">Granja de Xenón</option>
-                              <option value="Paw Patrol (Rosado)">Paw Patrol (Rosado)</option>
-                              <option value="Paw Patrol (Azul)">Paw Patrol (Azul)</option>
-                              <option value="Minecraft">Minecraft</option>
+<label class="label" for="detalle">Detallar pedido (opcional):</label><br><br>
+<textarea class="input" id="detalle" placeholder="Detalle su pedido" rows="4"></textarea>
 
-   
-
-
-
-                          </select>
-
-                          <br><br>
-
-                          <label class="label" for="cantidad">Cantidad de unidades:</label>
-                          <input class="input" type="number" id="cantidad" min="1" placeholder="Ingrese Unidades">
                          
-                          
-                          <br><br>
-                          
-                          <label for="pcs">Piezas por unidad</label><br>
-                          <select class="input" id="pcs">
-
-                              <option value="7Pcs">Unidad de 7 Piezas</option>
-
-
-                          </select>
 
                           <br><br>
+
 
                           <button class="button3" onclick="enviarWhatsApp()">Enviar a WhatsApp
                               <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
@@ -199,36 +279,41 @@
       </div>
     </div>
   </div>
+</div>
 
   <!--BOTON WHASTAPP-->
 
-<script>
+  <script>
       function enviarWhatsApp() {
-          let diseno = document.getElementById("diseno").value;
-          let cantidad = document.getElementById("cantidad").value;
-          let pcs = document.getElementById("pcs").value;
-          var producto = document.getElementById("producto").textContent;
+  // Obtener valores de los campos del formulario
+  let producto = document.getElementById("producto").innerText; 
+  let diseno = document.getElementById("diseno").value;
+  let detalle = document.getElementById("detalle").value.trim();
 
-          if (!diseno) {
-              alert("Por favor, selecciona una opción de Diseño.");
-              return;
-          }
+  // Validar que al menos se haya seleccionado un producto
+  if (!diseno) {
+    alert("⚠️ Por favor, selecciona al menos un producto.");
+    return;
+  }
 
-          if (!cantidad || cantidad <= 0) {
-              alert("Por favor, ingresa una cantidad válida de globos.");
-              return;
-          }
+  // Construcción del mensaje principal
+  let mensaje = `📦 *Pedido MegaParty*\n\n` +
+                `🧸 *Producto:* ${producto}\n` +
+                `🎨 *Diseño(s) seleccionado(s):*\n${diseno}`;
 
-          if (!pcs) {
-              alert("Por favor, selecciona una cantidad de piezas.");
-              return;
-          }
+  // Añadir detalles del pedido si el usuario escribió algo
+  if (detalle !== "") {
+    mensaje += `\n\n📝 *Detalle del pedido:*\n${detalle}`;
+  }
 
-          let mensaje = encodeURIComponent(`Deseo ${cantidad} unidades de: ${producto} de ${pcs} | Con el diseño: ${diseno}`);
-          let url = `https://wa.me/+50764913791?text=${mensaje}`;
-          window.open(url, '_blank'); 
-        }
+  // Enviar mensaje por WhatsApp
+  let url = `https://wa.me/+50764913791?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, '_blank');
+}
+
   </script>
+
+<!-- nuevo formulario termina -->
 
 
   <script>
