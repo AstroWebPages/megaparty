@@ -2377,3 +2377,12 @@ a.no-drag, a.no-drag img {
   border-radius: 6px;
   text-align: center;
 }
+
+/* Sticky form whastapp */
+
+  @media (min-width: 992px) {
+    .sticky-formulario {
+      position: sticky;
+      top: 20px; /* distancia desde arriba */
+    }
+  }
