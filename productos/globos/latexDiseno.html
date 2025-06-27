@@ -117,69 +117,186 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img draggable="false" src="../../assets/images/globos/CA-G12-RV.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/globos/DPG-MI3-GL040.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/globos/DPG-MK3-GL040.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/globos/DPG-STI-GL040.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/globos/FPG-MT-GL040.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/globos/MPG-SP2-GL040.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/globos/XPG-PW-GL040.jpg" alt="">
+  <label for="diseno">Selecciona Productos:</label>
+  <input type="hidden" id="diseno" name="diseno" />
 
-                    </div>
+  <div class="selector-cajas" id="selectorDisenos">
+
+    <!-- Revelación de género (2) -->
+    <div class="caja" data-valor="Boy Revelación CA-G12-RV">
+      <img draggable="false" src="../../assets/images/globos/CA-G12-RV.jpg" alt="Boy Revelación CA-G12-RV">
+      <br>Boy Revelación
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Girl Revelación CA-G12-RV">
+      <img draggable="false" src="../../assets/images/globos/CA-G12-RV.jpg" alt="Girl Revelación CA-G12-RV">
+      <br>Girl Revelación
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <!-- Minnie (3 colores) -->
+    <div class="caja" data-valor="Minnie Rosado DPG-MI3-GL040">
+      <img draggable="false" src="../../assets/images/globos/DPG-MI3-GL040.jpg" alt="Minnie Rosado DPG-MI3-GL040">
+      Minnie Rosado
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Minnie Blanco DPG-MI3-GL040">
+      <img draggable="false" src="../../assets/images/globos/DPG-MI3-GL040.jpg" alt="Minnie Blanco DPG-MI3-GL040">
+      Minnie Blanco
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Minnie Rojo DPG-MI3-GL040">
+      <img draggable="false" src="../../assets/images/globos/DPG-MI3-GL040.jpg" alt="Minnie Rojo DPG-MI3-GL040">
+      Minnie Rojo
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <!-- Mickey (3 colores) -->
+    <div class="caja" data-valor="Mickey Rojo DPG-MK3-GL040">
+      <img draggable="false" src="../../assets/images/globos/DPG-MK3-GL040.jpg" alt="Mickey Rojo DPG-MK3-GL040">
+      Mickey Rojo
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Mickey Verde DPG-MK3-GL040">
+      <img draggable="false" src="../../assets/images/globos/DPG-MK3-GL040.jpg" alt="Mickey Verde DPG-MK3-GL040">
+      Mickey Verde
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Mickey Azul DPG-MK3-GL040">
+      <img draggable="false" src="../../assets/images/globos/DPG-MK3-GL040.jpg" alt="Mickey Azul DPG-MK3-GL040">
+      Mickey Azul
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <!-- Stitch (3 colores) -->
+    <div class="caja" data-valor="Stitch Rosado DPG-STI-GL040">
+      <img draggable="false" src="../../assets/images/globos/DPG-STI-GL040.jpg" alt="Stitch Rosado DPG-STI-GL040">
+      Stitch Rosado
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Stitch Aqua DPG-STI-GL040">
+      <img draggable="false" src="../../assets/images/globos/DPG-STI-GL040.jpg" alt="Stitch Aqua DPG-STI-GL040">
+      Stitch Aqua
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Stitch Amarillo DPG-STI-GL040">
+      <img draggable="false" src="../../assets/images/globos/DPG-STI-GL040.jpg" alt="Stitch Amarillo DPG-STI-GL040">
+      Stitch Amarillo
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <!-- Minecraft (3 colores) -->
+    <div class="caja" data-valor="Minecraft Verde FPG-MT-GL040">
+      <img draggable="false" src="../../assets/images/globos/FPG-MT-GL040.jpg" alt="Minecraft Verde FPG-MT-GL040">
+      Minecraft Verde
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Minecraft Celeste FPG-MT-GL040">
+      <img draggable="false" src="../../assets/images/globos/FPG-MT-GL040.jpg" alt="Minecraft Celeste FPG-MT-GL040">
+      Minecraft Celeste
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Minecraft Amarillo FPG-MT-GL040">
+      <img draggable="false" src="../../assets/images/globos/FPG-MT-GL040.jpg" alt="Minecraft Amarillo FPG-MT-GL040">
+      Minecraft Amarillo
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <!-- Spider-Man (3 colores) -->
+    <div class="caja" data-valor="Spider-Man Azul MPG-SP2-GL040">
+      <img draggable="false" src="../../assets/images/globos/MPG-SP2-GL040.jpg" alt="Spider-Man Azul MPG-SP2-GL040">
+      Spider-Man Azul
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Spider-Man Blanco MPG-SP2-GL040">
+      <img draggable="false" src="../../assets/images/globos/MPG-SP2-GL040.jpg" alt="Spider-Man Blanco MPG-SP2-GL040">
+      Spider-Man Blanco
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Spider-Man Rojo MPG-SP2-GL040">
+      <img draggable="false" src="../../assets/images/globos/MPG-SP2-GL040.jpg" alt="Spider-Man Rojo MPG-SP2-GL040">
+      Spider-Man Rojo
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <!-- Paw Patrol (3 colores) -->
+    <div class="caja" data-valor="Paw Patrol Rojo XPG-PW-GL040">
+      <img draggable="false" src="../../assets/images/globos/XPG-PW-GL040.jpg" alt="Paw Patrol Rojo XPG-PW-GL040">
+      Paw Patrol Rojo
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Paw Patrol Celeste XPG-PW-GL040">
+      <img draggable="false" src="../../assets/images/globos/XPG-PW-GL040.jpg" alt="Paw Patrol Celeste XPG-PW-GL040">
+      Paw Patrol Celeste
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+    <div class="caja" data-valor="Paw Patrol Amarillo XPG-PW-GL040">
+      <img draggable="false" src="../../assets/images/globos/XPG-PW-GL040.jpg" alt="Paw Patrol Amarillo XPG-PW-GL040">
+      Paw Patrol Amarillo
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+                    <!-- FORMULARIO NUEVO -->
+
+
+                  
                     <div class="col-lg-3">
+                    <div class="sticky-formulario">
                       <h4>Formulario de pedido</h4>
                       
   <!--funcion helio y cantidad-->
 
                           <label for="helio">Selecciona una opción:</label>
                           <select class="input" id="helio">
-                              <option value="">Elige una opción</option>
+                              <option value="">Elige una opción de helio</option>
                               <option value="Con Helio (Por Unidad)">Con Helio (Por Unidad)</option>
                               <option value="Sin Helio">Sin Helio</option>
                           </select>
-
-                          <br><br>
-
-                          <label for="medida">Medida de Globo (pulgadas)</label>
-                          <select class="input" id="medida">
-                              <option value="">Elige una medida</option>
-                              <option value="R12">12 Pulgadas</option>
-                              <option value="R9">9 Pulgadas</option>
-                              <option value="R5">5 Pulgadas</option>                          </select>
                           
-                          <br><br>
 
-                          <label for="color">Diseño de la unidad:</label><br>
-                          <select class="input" id="color">
-                              <option value="">Diseño</option>
-                              <option value="(Boy)Revelación de genero">Boy (Revelación de genero)</option>
-                              <option value="(Girl)Revelación de genero">Girl (Revelación de genero)</option>
-
-                              <option value="(Rosado) Minnie">(Rosado) Minnie</option>
-                              <option value="(Blanco) Minnie">(Blanco) Minnie</option>
-                              <option value="(Rojo) Minnie">(Rojo) Minnie</option>
-
-                              <option value="(Rojo) Mickey">(Rojo) Mickey</option>
-                              <option value="(Verde) Mickey">(Verde) Mickey</option>
-                              <option value="(Azul) Mickey">(Azul) Mickey</option>
-
-                              <option value="(Rosado) Stitch">(Rosado) Stitch</option>
-                              <option value="(Aqua) Stitch">(Aqua) Stitch</option>
-                              <option value="(Amarillo) Stitch">(Amarillo) Stitch</option>
-
-                              <option value="(Verde) Minecraft">(Verde) Minecraft</option>
-                              <option value="(Celeste) Minecraft">(Celeste) Minecraft</option>
-                              <option value="(Amarillo) Minecraft">(Amarillo) Minecraft</option>
-
-                              <option value="(Azul) Spider-Man">(Azul) Spider-Man</option>
-                              <option value="(Blanco) Spider-Man">(Blanco) Spider-Man</option>
-                              <option value="(Rojo) Spider-Man">(Rojo) Spider-Man</option>
-
-                              <option value="Paw Patrol (Rojo)">Paw Patrol (Rojo)</option>
-                              <option value="Paw Patrol (Celeste)">Paw Patrol (Celeste)</option>
-                              <option value="Paw Patrol (Amarillo)">Paw Patrol (Amarillo)</option>
-
-                          </select>
                           
                           <br><br>
                           
@@ -192,10 +309,10 @@
                           
                           <br><br>
 
-                          <label class="label" for="cantidad">Cantidad de unidades:</label>
-                          <input class="input" type="number" id="cantidad" min="1" placeholder="Ingrese Unidades">
-                          
-                          <br><br>
+                            <label class="label" for="detalle">Detallar pedido (opcional):</label><br><br>
+                            <textarea class="input" id="detalle" placeholder="Detalle su pedido" rows="4"></textarea>
+                            <br><br>
+
 
                           <button class="button3" onclick="enviarWhatsApp()">Enviar a WhatsApp
                               <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
@@ -205,7 +322,7 @@
                     </div>
                   </div>
                 </div>
-
+              </div> 
               </div>
             </div>
           </div>
@@ -214,46 +331,46 @@
     </div>
   </div>
 
+
+  
 <!--BOTON WHASTAPP-->
 
-      <script>
-        function enviarWhatsApp() {
-            let opcion = document.getElementById("helio").value;
-            let cantidad = document.getElementById("cantidad").value;
-            let color = document.getElementById("color").value;
-            let pcs = document.getElementById("pcs").value;
-            let medida = document.getElementById("medida").value;
-            var producto = document.getElementById("producto").textContent;
+        <script>
+                    function enviarWhatsApp() {
+              let producto = document.getElementById("producto").innerText; 
+              let opcion = document.getElementById("helio").value;
+              let diseno = document.getElementById("diseno").value;
+              let pcs = document.getElementById("pcs").value;
+              let detalle = document.getElementById("detalle").value.trim();
 
-
-            if (!opcion) {
-                alert("Por favor, selecciona una opción de helio.");
+              if (!diseno) {
+                alert("⚠️ Por favor, selecciona un color de globo.");
                 return;
-            }
+              }
 
-            if (!cantidad || cantidad <= 0) {
-                alert("Por favor, ingresa una cantidad válida de globos.");
+              if (!opcion) {
+                alert("⚠️ Por favor, selecciona si deseas globos con o sin helio.");
                 return;
+              }
+
+              let mensaje = `🎈 *Pedido de Globos - MegaParty*\n\n` +
+                            `🗂️ *Producto:* ${producto}\n` +
+                            `🎨 *Color seleccionado:* ${diseno}\n` +
+                            `🎈 *Opción:* ${opcion}\n` +
+                            `🔢 *Cantidad:* ${pcs} por unidad`;
+
+              if (detalle !== "") {
+                mensaje += `\n\n📝 *Detalle adicional:*\n${detalle}`;
+              }
+
+              let url = `https://wa.me/+50764913791?text=${encodeURIComponent(mensaje)}`;
+              window.open(url, '_blank');
             }
 
-            if (!color) {
-                alert("Por favor, selecciona una opción de color.")
-            }
+        </script>
 
-            if (!pcs) {
-                alert("Por favor, selecciona una cantidad de piezas.")
-            }
 
-            if (!medida) {
-                alert("Por favor, selecciona la medida.")
-
-            }
-          
-          let mensaje = encodeURIComponent(`Deseo ${cantidad} unidades de ${pcs} ${producto} ${medida} diseño: ${color} | Con la opción: ${opcion}`);
-          let url = `https://wa.me/+50764913791?text=${mensaje}`;
-          window.open(url, '_blank'); 
-        }
-    </script>
+<!-- FIN FORMULARIO NUEVO -->
 
 
   <footer class="footer-no-gap">

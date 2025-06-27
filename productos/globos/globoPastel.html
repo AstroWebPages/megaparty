@@ -96,7 +96,7 @@
         <div class="col-lg-4">
           <div class="section-heading">
             <h6>| Globos</h6>
-            <h2 id="producto">Globos Cromados</h2>
+            <h2 id="producto">Globos Pastel</h2>
           </div>
         </div>
         <div class="col-lg-12">
@@ -117,65 +117,80 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img draggable="false" src="../../assets/images/globos/CA-5-PSUR.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/globos/CA-5-PORG.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/globos/CA-5-PPINK.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/globos/CA-5-PTIF.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/globos/CA-5-PWM.jpg" alt="">
-                      <img draggable="false" src="../../assets/images/globos/CA-5-PYEL.jpg" alt="">
+  <label for="diseno">Selecciona Productos:</label>
+  <input type="hidden" id="diseno" name="diseno" />
 
-                    </div>
+  <div class="selector-cajas" id="selectorDisenos">
+
+    <div class="caja" data-valor="Surtido Pastel CA-5-PSUR">
+      <img draggable="false" src="../../assets/images/globos/CA-5-PSUR.jpg" alt="Surtido Pastel CA-5-PSUR">
+      Surtido Pastel
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Naranja Pastel CA-5-PORG">
+      <img draggable="false" src="../../assets/images/globos/CA-5-PORG.jpg" alt="Naranja Pastel CA-5-PORG">
+      Naranja Pastel
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Rosado Pastel CA-5-PPINK">
+      <img draggable="false" src="../../assets/images/globos/CA-5-PPINK.jpg" alt="Rosado Pastel CA-5-PPINK">
+      Rosado Pastel
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Tifanny Pastel CA-5-PTIF">
+      <img draggable="false" src="../../assets/images/globos/CA-5-PTIF.jpg" alt="Tifanny Pastel CA-5-PTIF">
+      Tifanny Pastel
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Blanco Pastel CA-5-PWM">
+      <img draggable="false" src="../../assets/images/globos/CA-5-PWM.jpg" alt="Blanco Pastel CA-5-PWM">
+      Blanco Pastel
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Amarillo Pastel CA-5-PYEL">
+      <img draggable="false" src="../../assets/images/globos/CA-5-PYEL.jpg" alt="Amarillo Pastel CA-5-PYEL">
+      Amarillo Pastel
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+                    <!-- FORMULARIO NUEVO -->
+
+
+                  
                     <div class="col-lg-3">
+                    <div class="sticky-formulario">
                       <h4>Formulario de pedido</h4>
                       
   <!--funcion helio y cantidad-->
 
                           <label for="helio">Selecciona una opción:</label>
                           <select class="input" id="helio">
-                              <option value="">Elige una opción</option>
+                              <option value="">Elige una opción de helio</option>
                               <option value="Con Helio (Por Unidad)">Con Helio (Por Unidad)</option>
                               <option value="Sin Helio">Sin Helio</option>
                           </select>
-
-                          <br><br>
-
-                          <label for="medida">Medida de Globo (pulgadas)</label>
-                          <select class="input" id="medida">
-                              <option value="">Elige una medida</option>
-                              <option value="R12">12 Pulgadas</option>
-                              <option value="R9">9 Pulgadas</option>
-                              <option value="R5">5 Pulgadas</option>                          
-                              <option value="R270">Globos Largos</option>                          
-                            
-                            </select>
                           
-                          <br><br>
 
-                          <label for="color">Color de la unidad:</label><br>
-                          <select class="input" id="color">
-                              <option value="">Colores</option>
-                              <option value="Rojo">Rojo</option>
-                              <option value="Fucsia">Fucsia</option>
-                              <option value="Rosado">Rosado</option>
-                              <option value="Magenta">Magenta</option>
-                              <option value="Naranja">Naranja</option>
-                              <option value="Amarillo">Amarillo</option>
-                              <option value="Verde">Verde</option>
-                              <option value="VerdeLimon">Verde Limón</option>
-                              <option value="Celeste">Celeste</option>
-                              <option value="Turquesa">Turquesa</option>
-                              <option value="Negro">Negro</option>
-                              <option value="AzulRoyal">Azul Royal</option>
-                              <option value="Dorado">Dorado</option>
-                              <option value="Plateado">Plateado</option>
-                              <option value="RoseGold">Rose Gold</option>
-                              <option value="Morado">Morado</option>
-                              <option value="VerdeOliva">VerdeOliva</option>
-                              <option value="Terracota">Terracota</option>
-                              <option value="Arena">Arena</option>
-                              <option value="Surtido1">Surtido 1</option>
-                              <option value="Surtido2">Surtido 2</option>
-                          </select>
                           
                           <br><br>
                           
@@ -188,10 +203,10 @@
                           
                           <br><br>
 
-                          <label class="label" for="cantidad">Cantidad de unidades:</label>
-                          <input class="input" type="number" id="cantidad" min="1" placeholder="Ingrese Unidades">
-                          
-                          <br><br>
+                            <label class="label" for="detalle">Detallar pedido (opcional):</label><br><br>
+                            <textarea class="input" id="detalle" placeholder="Detalle su pedido" rows="4"></textarea>
+                            <br><br>
+
 
                           <button class="button3" onclick="enviarWhatsApp()">Enviar a WhatsApp
                               <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
@@ -201,8 +216,7 @@
                     </div>
                   </div>
                 </div>
-
-
+              </div> 
               </div>
             </div>
           </div>
@@ -211,45 +225,46 @@
     </div>
   </div>
 
+
+  
 <!--BOTON WHASTAPP-->
 
-      <script>
-        function enviarWhatsApp() {
-            let opcion = document.getElementById("helio").value;
-            let cantidad = document.getElementById("cantidad").value;
-            let color = document.getElementById("color").value;
-            let pcs = document.getElementById("pcs").value;
-            let medida = document.getElementById("medida").value;
-            var producto = document.getElementById("producto").textContent;
+        <script>
+                    function enviarWhatsApp() {
+              let producto = document.getElementById("producto").innerText; 
+              let opcion = document.getElementById("helio").value;
+              let diseno = document.getElementById("diseno").value;
+              let pcs = document.getElementById("pcs").value;
+              let detalle = document.getElementById("detalle").value.trim();
 
-            if (!opcion) {
-                alert("Por favor, selecciona una opción de helio.");
+              if (!diseno) {
+                alert("⚠️ Por favor, selecciona un color de globo.");
                 return;
-            }
+              }
 
-            if (!cantidad || cantidad <= 0) {
-                alert("Por favor, ingresa una cantidad válida de globos.");
+              if (!opcion) {
+                alert("⚠️ Por favor, selecciona si deseas globos con o sin helio.");
                 return;
+              }
+
+              let mensaje = `🎈 *Pedido de Globos - MegaParty*\n\n` +
+                            `🗂️ *Producto:* ${producto}\n` +
+                            `🎨 *Color seleccionado:* ${diseno}\n` +
+                            `🎈 *Opción:* ${opcion}\n` +
+                            `🔢 *Cantidad:* ${pcs} por unidad`;
+
+              if (detalle !== "") {
+                mensaje += `\n\n📝 *Detalle adicional:*\n${detalle}`;
+              }
+
+              let url = `https://wa.me/+50764913791?text=${encodeURIComponent(mensaje)}`;
+              window.open(url, '_blank');
             }
 
-            if (!color) {
-                alert("Por favor, selecciona una opción de color.")
-            }
+        </script>
 
-            if (!pcs) {
-                alert("Por favor, selecciona una cantidad de piezas.")
-            }
 
-            if (!medida) {
-                alert("Por favor, selecciona la medida.")
-                
-            }
-          
-          let mensaje = encodeURIComponent(`Deseo ${cantidad} unidades de ${pcs} ${producto} ${medida} color ${color} con la opción: ${opcion}`);
-          let url = `https://wa.me/+50764913791?text=${mensaje}`;
-          window.open(url, '_blank'); 
-        }
-    </script>
+<!-- FIN FORMULARIO NUEVO -->
 
 
   <footer class="footer-no-gap">
