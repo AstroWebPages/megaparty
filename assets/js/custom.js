@@ -136,3 +136,79 @@
       });
     });
   });
+
+//CAJAS ENVIO
+
+  const cajas = document.querySelectorAll(".selector-cajas .caja");
+  const inputDiseno = document.getElementById("diseno");
+
+  cajas.forEach(caja => {
+    caja.addEventListener("click", () => {
+      caja.classList.toggle("seleccionado");
+      const cantidadInput = caja.querySelector(".input-cantidad");
+
+      if (caja.classList.contains("seleccionado")) {
+        cantidadInput.value = 1;
+      } else {
+        cantidadInput.value = 0;
+      }
+
+      // Actualizar input oculto con resumen
+      const seleccionados = Array.from(document.querySelectorAll(".caja.seleccionado"))
+        .map(c => {
+          const cantidad = c.querySelector(".input-cantidad").value;
+          return `${c.dataset.valor} (x${cantidad})`;
+        });
+
+      inputDiseno.value = seleccionados.join(", ");
+    });
+  });
+
+
+  //CAJAS COUNTER
+
+ document.querySelectorAll('.input-cantidad').forEach(input => {
+    let valorAnterior = "";
+
+    input.addEventListener('click', function (e) {
+      e.stopPropagation(); // No deseleccionar la caja
+    });
+
+    input.addEventListener('focus', function () {
+      valorAnterior = this.value; // Guardar valor actual
+      this.value = ""; // Borrar el contenido al enfocar
+    });
+
+    input.addEventListener('blur', function () {
+      // Si el campo queda vacío, restaurar valor anterior
+      if (this.value.trim() === "") {
+        this.value = valorAnterior || 1;
+      }
+    });
+
+    input.addEventListener('input', function () {
+      const caja = this.closest('.caja');
+
+      // Si no está seleccionada y hay valor válido, seleccionarla
+      if (!caja.classList.contains('seleccionado') && parseInt(this.value) > 0) {
+        caja.classList.add('seleccionado');
+      }
+
+      actualizarInputHidden();
+    });
+
+    input.addEventListener('change', function () {
+      actualizarInputHidden();
+    });
+  });
+
+  function actualizarInputHidden() {
+    const seleccionados = Array.from(document.querySelectorAll(".caja.seleccionado"))
+      .map(c => {
+        const cantidadInput = c.querySelector(".input-cantidad");
+        const cantidad = cantidadInput ? cantidadInput.value : 1;
+        return `${c.dataset.valor} (x${cantidad})`;
+      });
+
+    document.getElementById("diseno").value = seleccionados.join(", ");
+  }

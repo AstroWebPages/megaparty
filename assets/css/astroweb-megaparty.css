@@ -1283,57 +1283,238 @@ Contact Style
 
 .contact-content #contact-form {
   margin-left: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-  padding: 35px 30px;
-  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0px 15px 40px rgba(255, 105, 180, 0.3), 
+              0px 5px 15px rgba(255, 165, 0, 0.2);
+  padding: 40px 35px;
+  background: linear-gradient(135deg, #ff6bb6 0%, #ffa726 25%, #42a5f5 50%, #ab47bc 75%, #ff6bb6 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Emojis que forman un marco circular alrededor del formulario */
+.contact-content #contact-form::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border-radius: 35px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contact-content #contact-form .emoji-border {
+  position: absolute;
+  font-size: 28px;
+  animation: rotateAroundForm 8s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Posicionamiento de emojis en círculo */
+.contact-content #contact-form .emoji-1 {
+  top: -20px;
+  left: 50%;
+  transform-origin: 0 calc(50vh);
+  animation-delay: 0s;
+}
+
+.contact-content #contact-form .emoji-2 {
+  top: 20%;
+  right: -25px;
+  transform-origin: calc(-50vw) 0;
+  animation-delay: -1s;
+}
+
+.contact-content #contact-form .emoji-3 {
+  bottom: -20px;
+  right: 40%;
+  transform-origin: 0 calc(-30vh);
+  animation-delay: -2s;
+}
+
+.contact-content #contact-form .emoji-4 {
+  bottom: 20%;
+  left: -25px;
+  transform-origin: calc(50vw) 0;
+  animation-delay: -3s;
+}
+
+.contact-content #contact-form .emoji-5 {
+  top: 10%;
+  left: 20%;
+  transform-origin: 0 0;
+  animation-delay: -4s;
+}
+
+.contact-content #contact-form .emoji-6 {
+  top: 10%;
+  right: 20%;
+  transform-origin: 0 0;
+  animation-delay: -5s;
+}
+
+.contact-content #contact-form .emoji-7 {
+  bottom: 10%;
+  left: 20%;
+  transform-origin: 0 0;
+  animation-delay: -6s;
+}
+
+.contact-content #contact-form .emoji-8 {
+  bottom: 10%;
+  right: 20%;
+  transform-origin: 0 0;
+  animation-delay: -7s;
+}
+
+.contact-content #contact-form::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes rotateAroundForm {
+  0% {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(120px) rotate(-360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(30px, -20px) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) rotate(240deg); }
 }
 
 .contact-content #contact-form label {
-  font-size: 15px;
-  color: #3a3a3a;
+  font-size: 16px;
+  color: #fff;
   margin-bottom: 15px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  display: block;
 }
 
 .contact-content #contact-form input {
   width: 100%;
-  height: 44px;
-  border-radius: 22px;
-  background-color: #f6f6f6;
-  border: none;
-  margin-bottom: 30px;
-  font-size: 14px;
-  padding: 0px 15px;
+  height: 50px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid transparent;
+  margin-bottom: 25px;
+  font-size: 15px;
+  padding: 0px 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.contact-content #contact-form input:focus {
+  outline: none;
+  border: 3px solid #fff;
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
 }
 
 .contact-content #contact-form textarea {
   width: 100%;
-  height: 150px;
-  max-height: 180px;
-  border-radius: 22px;
-  background-color: #f6f6f6;
-  border: none;
-  margin-bottom: 40px;
-  font-size: 14px;
-  padding: 15px 15px;
+  height: 120px;
+  max-height: 200px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid transparent;
+  margin-bottom: 30px;
+  font-size: 15px;
+  padding: 20px 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  resize: vertical;
+}
+
+.contact-content #contact-form textarea:focus {
+  outline: none;
+  border: 3px solid #fff;
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
 }
 
 .contact-content #contact-form button {
-  background-color: #1e1e1e;
-  height: 44px;
-  border-radius: 22px;
-  padding: 0px 20px;
+  background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+  background-size: 400% 400%;
+  height: 55px;
+  border-radius: 30px;
+  padding: 0px 35px;
   color: #fff;
   border: none;
-  font-size: 15px;
-  font-weight: 500;
-  transition: all .5s;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  animation: buttonGradient 3s ease infinite;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.contact-content #contact-form button::before {
+  content: '🎊';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .contact-content #contact-form button:hover {
-  background-color: #953f99;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
+.contact-content #contact-form button:hover::before {
+  opacity: 1;
+  animation: sparkle 0.6s ease;
+}
+
+.contact-content #contact-form button:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+@keyframes buttonGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: translateY(-50%) scale(1); }
+  50% { transform: translateY(-50%) scale(1.2); }
+}
+
+/* Eliminar los globos flotantes anteriores */
 
 /* 
 ---------------------------------------------
@@ -2142,4 +2323,57 @@ a.no-drag, a.no-drag img {
                 margin-bottom: 2rem;
             }
         }
-        
+/* CAJAS PEDIDO */
+
+  .selector-cajas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+.caja {
+  flex: 1 1 calc(50% - 10px); /* Antes era 25%, ahora 50% para que salgan 2 por fila */
+  padding: 12px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: 0.3s;
+  user-select: none;
+}
+
+
+  .caja:hover {
+    border-color: #007bff;
+  }
+
+  .caja.seleccionado {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+
+.caja img {
+  width: 100%;
+  height: auto;
+  max-width: 200px; /* Ajusta este valor según el tamaño deseado */
+  margin-bottom: 8px;
+}
+
+
+.contador {
+  margin-top: 10px;
+  display: block !important;
+}
+
+.input-cantidad {
+  width: 70px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
