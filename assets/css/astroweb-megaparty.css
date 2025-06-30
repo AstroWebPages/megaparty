@@ -2325,16 +2325,20 @@ a.no-drag, a.no-drag img {
         }
 /* CAJAS PEDIDO */
 
-  .selector-cajas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
+.selector-cajas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
 .caja {
-  flex: 1 1 calc(50% - 10px); /* Antes era 25%, ahora 50% para que salgan 2 por fila */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;  
+  flex: 1 1 calc(50% - 10px);
   padding: 12px;
   text-align: center;
   border: 2px solid #ccc;
@@ -2347,26 +2351,26 @@ a.no-drag, a.no-drag img {
 }
 
 
-  .caja:hover {
-    border-color: #007bff;
-  }
 
-  .caja.seleccionado {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-  }
+.caja:hover {
+  border-color: #007bff;
+}
+
+.caja.seleccionado {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
 
 .caja img {
   width: 100%;
   height: auto;
-  max-width: 200px; /* Ajusta este valor según el tamaño deseado */
+  max-width: 200px;
   margin-bottom: 8px;
 }
 
-
 .contador {
-  margin-top: 10px;
+  margin-top: auto; /* Empuja este bloque hacia abajo */
   display: block !important;
 }
 
