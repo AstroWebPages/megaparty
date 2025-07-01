@@ -1163,8 +1163,13 @@ Properties Style
 }
 
 .properties .item img {
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;   
   border-radius: 10px;
+  display: block;     
 }
+
 
 .properties .item span.category {
   background-color: #fbd9cf;
