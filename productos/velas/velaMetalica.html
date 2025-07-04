@@ -161,27 +161,106 @@
   <!--BOTON WHASTAPP-->
 
   <script>
-      function enviarWhatsApp() {
-          let cantidad = document.getElementById("cantidad").value;
-          let pcs = document.getElementById("pcs").value;
-          var producto = document.getElementById("producto").textContent;
+function enviarWhatsApp() {
+  let producto = document.getElementById("producto").innerText; 
+  let detalle = document.getElementById("detalle").value.trim();
 
+  let disenoDetalle = "";
+  let total = 0;
+  let totalUnidades = 0;
 
-          if (!cantidad || cantidad <= 0) {
-              alert("Por favor, ingresa una cantidad válida de globos.");
-              return;
-          }
+  // Recorre todos los productos seleccionados
+  document.querySelectorAll('.caja').forEach(caja => {
+    const nombre = caja.dataset.valor;
+    const precio = parseFloat(caja.dataset.precio) || 0;
+    const cantidad = parseInt(caja.querySelector('.input-cantidad').value) || 0;
 
-          if (!pcs) {
-              alert("Por favor, selecciona una cantidad de piezas.");
-              return;
-          }
+    if (cantidad > 0) {
+      const subtotal = cantidad * precio;
+      disenoDetalle += `• ${nombre} x${cantidad} = $${subtotal.toFixed(2)}\n`;
+      total += subtotal;
+      totalUnidades += cantidad;
+    }
+  });
 
-          let mensaje = encodeURIComponent(`Deseo ${cantidad} unidades de: ${producto} de ${pcs} `);
-          let url = `https://wa.me/+50764913791?text=${mensaje}`;
-          window.open(url, '_blank'); 
-        }
-  </script>
+  if (disenoDetalle === "") {
+    alert("⚠️ Por favor, selecciona al menos un producto.");
+    return;
+  }
+
+  // Calcular descuento por cantidad total de unidades
+  let descuentoPorc = 0;
+  if (totalUnidades >= 6 && totalUnidades < 10) {
+    descuentoPorc = 5;
+  } else if (totalUnidades === 10) {
+    descuentoPorc = 10;
+  } else if (totalUnidades > 10) {
+    descuentoPorc = 15;
+  }
+
+  let descuento = total * (descuentoPorc / 100);
+  let totalFinal = total - descuento;
+
+  // Construir mensaje principal
+  let mensaje = `📦 *Pedido MegaParty*\n\n` +
+                `🧸 *Producto:* ${producto}\n` +
+                `🎨 *Diseño(s) seleccionado(s):*\n${disenoDetalle}` +
+                `📦 *Unidades totales:* ${totalUnidades}\n`;
+
+  if (descuentoPorc > 0) {
+    mensaje += `✅ *Descuento aplicado:* ${descuentoPorc}% (-$${descuento.toFixed(2)})\n`;
+  }
+
+  mensaje += `💵 *Total a pagar:* $${totalFinal.toFixed(2)}`;
+
+  if (detalle !== "") {
+    mensaje += `\n\n📝 *Detalle del pedido:*\n${detalle}`;
+  }
+
+  let url = `https://wa.me/+50764913791?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, '_blank');
+}
+
+// OPCIONAL: Si quieres que el precio total en pantalla se actualice en tiempo real con descuento:
+document.querySelectorAll('.input-cantidad').forEach(input => {
+  input.addEventListener('input', actualizarPrecioTotal);
+});
+
+function actualizarPrecioTotal() {
+  let total = 0;
+  let totalUnidades = 0;
+
+  document.querySelectorAll('.caja').forEach(caja => {
+    const precioUnitario = parseFloat(caja.dataset.precio) || 0;
+    const cantidad = parseInt(caja.querySelector('.input-cantidad').value) || 0;
+
+    total += cantidad * precioUnitario;
+    totalUnidades += cantidad;
+  });
+
+  let descuentoPorc = 0;
+  if (totalUnidades >= 6 && totalUnidades < 10) {
+    descuentoPorc = 5;
+  } else if (totalUnidades === 10) {
+    descuentoPorc = 10;
+  } else if (totalUnidades > 10) {
+    descuentoPorc = 15;
+  }
+
+  let descuento = total * (descuentoPorc / 100);
+  let totalFinal = total - descuento;
+
+  document.getElementById('precioTotal').textContent = totalFinal.toFixed(2);
+
+  const descuentoInfo = document.getElementById('descuentoInfo');
+  if (descuentoPorc > 0) {
+    descuentoInfo.textContent = `¡Descuento aplicado: ${descuentoPorc}% (-$${descuento.toFixed(2)})!`;
+  } else {
+    descuentoInfo.textContent = ""; // Quita el texto si no hay descuento
+  }
+}
+
+</script>
 
 
   <script>
