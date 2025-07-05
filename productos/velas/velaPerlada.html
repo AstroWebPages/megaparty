@@ -117,30 +117,58 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <img draggable="false" src="../../assets/images/velas/HM-PASTP-VL12.jpg" alt="">
+  <label for="diseno">Selecciona Color:</label>
+  <input type="hidden" id="diseno" name="diseno" />
+
+  <div class="selector-cajas" id="selectorDisenos">
+
+    <div class="caja" data-valor="Velas HM-PASTP-VL12" data-precio="0.00">
+      <img draggable="false" src="../../assets/images/velas/HM-PASTP-VL12.jpg" alt="Velas HM-PASTP-VL12">
+      Velas 12 Piezas
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
+
+    <div class="caja" data-valor="Velas HM-PASTP-VL20" data-precio="1.30">
+      <img draggable="false" src="../../assets/images/velas/HM-PASTP-VL20.jpg" alt="Velas HM-PASTP-VL20">
+      Velas 20 Piezas
+      <div class="contador" style="display:none;">
+        <input type="number" min="0" value="0" class="input-cantidad" placeholder="Unidades">
+      </div>
+    </div>
 
 
-                    </div>
+
+
+                      </div>
+  <!-- SECCIÓN PRECIO TOTAL -->
+  <div class="precio-total" style="margin-top:20px;">
+  <strong>Total: $<span id="precioTotal">0.00</span></strong><br>
+  <span id="descuentoInfo" style="color: green; font-weight: bold;"></span>
+</div>
+
+</div>
+
+
+                      <!--nuevo formulario -->
+
+
+
                     <div class="col-lg-3">
+                    <div class="sticky-formulario">
                       <h4>Formulario de pedido</h4>
                       
   <!--funcion helio y cantidad-->
 
 
-                          <label class="label" for="cantidad">Cantidad de unidades:</label>
-                          <input class="input" type="number" id="cantidad" min="1" placeholder="Ingrese Unidades">
+<label class="label" for="detalle">Detallar pedido (opcional):</label><br><br>
+<textarea class="input" id="detalle" placeholder="Detalle su pedido" rows="4"></textarea>
+
                          
-                          
-                          <br><br>
-                          
-                          <label for="pcs">Piezas por unidad</label><br>
-                          <select class="input" id="pcs">
-                              <option value="12Pcs">Unidad de 12 Piezas</option>
-                              <option value="20Pcs">Unidad de 20 Piezas</option>
-
-                          </select>
 
                           <br><br>
+
 
                           <button class="button3" onclick="enviarWhatsApp()">Enviar a WhatsApp
                               <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
@@ -157,6 +185,7 @@
       </div>
     </div>
   </div>
+</div>
 
   <!--BOTON WHASTAPP-->
 
